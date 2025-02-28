@@ -1,0 +1,21 @@
+<canvas id="ca"  width="720" height="480" style="background-color: black;" ></canvas>
+<script>
+    let ctx = ca.getContext('2d');
+    let p1 = 200;
+    let p2 = 200;
+    let key = {};
+    let ball = {
+        x: 360,
+        y: 240,
+        speedX: 3,
+        speedY: 0
+    }
+    draw()
+    function draw() {
+        ctx.fillStyle = 'white';
+        ctx.fillRect(10, p1, 10, 80);
+        ctx.fillRect(700, p2, 10, 80);
+        ctx.fillRect(360, 240, 10, 10);
+        requestAnimationFrame(draw);
+    }
+</script>
